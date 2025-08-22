@@ -45,7 +45,7 @@ def file_read_write():
 
             # Ensure folder exists
             if not os.path.exists(folder):
-                print("❌ Error: That folder does not exist.")
+                print(" Error: That folder does not exist.")
                 return
 
             # Create new file path in custom folder
@@ -55,11 +55,11 @@ def file_read_write():
         with open(new_filename, "w", encoding="utf-8", errors="ignore") as f:
             f.write(modified_content)
 
-        print(f"✅ File has been successfully written to '{new_filename}'")
+        print(f" File has been successfully written to '{new_filename}'")
 
     except FileNotFoundError:
-        print("❌ Error: File not found. Please check the filename and try again.")
+        print(" Error: File not found. Please check the filename and try again.")
     except PermissionError:
-        print("❌ Error: You don't have permission to read/write this file.")
+        print(" Error: You don't have permission to read/write this file.")
     except Exception as e:
-        print(f"⚠️ Unexpected error: {e}")
+        print(f" Unexpected error: {e}")
